@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import logo from '../assets/logo1.png'
+import logo from '../assets/logo.png'
 import {FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook} from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 import {Link} from 'react-scroll'
 import resume from '../assets/MyCV.pdf'
-import mylogo from '../assets/Logo.png'
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
@@ -13,36 +12,35 @@ const Navbar = () => {
         setNav(!nav);
     }
 
+    function logoClick () {
+        window.scroll({top: 0, left: 0, behavior: 'smooth' });
+    }
+
     return (
         <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#171717] text-gray-300'>
-            <div>
-                <img src={mylogo} alt="Logo Image" style={{width: '50px'}} />
+            <div onClick={logoClick} className='hover:scale-110 duration-500 cursor-pointer'>
+                <img src={logo} alt="Logo Image" style={{width: '50px'}} />
             </div>
 
             {/*Menu*/}
-            <ul className='hidden md:flex'>
-                <li>
-                <Link to='hero' smooth={true} duration={500}>
+            <ul className='hidden md:flex gap-1'>
+                <li className='hover:bg-gray-800 py-2 px-4 rounded duration-200'>
+                <Link to='hero' smooth={true} duration={500} >
                     Home
                 </Link>
                 </li>
-                <li>
-                <Link to='about' smooth={true} duration={500}>
+                <li className='hover:bg-gray-800 py-2 px-4 rounded duration-200'>
+                <Link to='about' smooth={true} duration={500} >
                     About
                 </Link>
                 </li>
-                <li>
-                <Link to='skills' smooth={true} duration={500}>
-                    Skills
-                </Link>
-                </li>
-                <li>
-                <Link to='project' smooth={true} duration={500}>
+                <li className='hover:bg-gray-800 py-2 px-4 rounded duration-200'>
+                <Link to='project' smooth={true} duration={500} >
                     Project
                 </Link>
                 </li>
-                <li>
-                <Link to='contact' smooth={true} duration={500}>
+                <li className='hover:bg-gray-800 py-2 px-4 rounded duration-200'>
+                <Link to='contact' smooth={true} duration={500} >
                     Contact
                 </Link>
                 </li>
@@ -64,11 +62,6 @@ const Navbar = () => {
                 <li className='py-6 text-4xl'>
                 <Link onClick={handleClick} to='about' smooth={true} duration={500}>
                     About
-                </Link>
-                </li>
-                <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to='skills' smooth={true} duration={500}>
-                    Skills
                 </Link>
                 </li>
                 <li className='py-6 text-4xl'>
