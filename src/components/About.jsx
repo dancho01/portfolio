@@ -31,9 +31,9 @@ const About = () => {
                     In my spare time, I like to
                     </p>
                     <ul>
-                        <li className='cursor-auto text-xl'>Swim 🏊</li>
-                        <li className='cursor-auto text-xl'>Piano 🎹</li>
-                        <li className='cursor-auto text-xl'>Read 📚</li>
+                        <li className='cursor-auto '>Swim 🏊</li>
+                        <li className='cursor-auto '>Play piano 🎹</li>
+                        <li className='cursor-auto '>Read 📚</li>
                     </ul>
                 </div>
             </div>
